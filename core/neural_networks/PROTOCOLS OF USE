@@ -1,0 +1,29 @@
+## PROTOCOLOS DE USO
+
+### 1. Inicialización del Modelo
+```python
+# Configuración avanzada
+config = {
+    'input_dims': 128,        # Dimensiones de entrada temporales
+    'quantum_bits': 10,       # Qubits para procesamiento
+    'temporal_layers': 16     # Capas de profundidad
+}
+
+predictor = TemporalPredictor(**config)
+```
+
+### 2. Predicción de Flujos Temporales
+```python
+# Secuencia de entrada (batch, timesteps, features)
+input_seq = torch.randn(1, 10, 128)  
+
+# Predicción de 5 pasos temporales
+predictions = predictor.predict_timeline(input_seq, n_steps=5)
+```
+
+### 3. Corrección de Anomalías
+```python
+# Detección de anomalías (valores > 0.7)
+anomaly_scores = torch.tensor([0.2, 0.8, 0.4, 0.9])
+corrected = predictor.stabilize_timeline(anomaly_scores)
+```
