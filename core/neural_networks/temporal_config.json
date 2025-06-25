@@ -3,3 +3,5 @@ config = {
     'quantum_bits': 10,       # Qubits para procesamiento
     'temporal_layers': 16     # Capas de profundidad
 }
+
+predictor = TemporalPredictor(**config)
