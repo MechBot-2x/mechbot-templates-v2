@@ -1,0 +1,5 @@
+config = {
+    'input_dims': 128,        # Dimensiones de entrada temporales
+    'quantum_bits': 10,       # Qubits para procesamiento
+    'temporal_layers': 16     # Capas de profundidad
+}
