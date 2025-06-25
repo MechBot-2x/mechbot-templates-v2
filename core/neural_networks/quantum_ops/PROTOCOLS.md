@@ -1,5 +1,5 @@
 ## PROTOCOLOS DE USO
-quantum_ops/
+
 ### 1. Inicialización del Modelo
 ```python
 # Configuración avanzada
